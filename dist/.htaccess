@@ -1,0 +1,25 @@
+DirectoryIndex index index.html
+DirectorySlash off
+Options -Indexes -MultiViews
+# Rules
+# site.com/
+# site.com/index -> site.com
+# site.com	-> site.com/
+# site.com/file/ -> site.com/file.html
+# site.com/file  -> site.com/file.html
+# site.com/dir/file ->site.com/dir/file.html
+# site.com/dir/file/ -> site.com/dir/file.html
+# no ending slashes
+
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteCond %{ENV:HTTPS} !on
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  RewriteCond %{HTTP_HOST} ^www.montylime.ru$ [NC]
+  RewriteRule ^(.*)$ https://montylime.ru/$1 [R=301,L]
+
+  RewriteRule ^index\.html$ / [R=301,L]
+  RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+#

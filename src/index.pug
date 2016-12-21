@@ -1,0 +1,136 @@
+doctype html
+html(lang="ru")
+
+  head
+    meta(charset="utf-8")
+
+    title Арт-группа Монти Лайм
+    include favicons.pug
+    link(rel="stylesheet" href="styles.css" charset="utf-8")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet")
+
+  body
+    include metrics.html
+    header.header.flex
+            h1.header__logo Арт-группа Монти Лайм
+            h2.header__phone
+              a(href="tel:8 (904) 994-30-26") 8 (904) 994-30-26
+              br
+              a(href="mailto:info@montylime.ru") info@montylime.ru
+    main
+
+      section(style="z-index:4").main.place.active
+        .main__wrap.flex.col-12
+          .main__content.flex
+            .main__title Мы -
+              .main__words
+                .main__word Яркость
+                .main__word Веселье
+                .main__word Арт
+                .main__word Праздник
+                .main__word Треш
+                .main__word Морковь
+                .main__word Талант
+            p.main__desc Ваш праздник будет ярче яркого
+
+            form.main__form.flex(metod="POST")
+              input(type="phone" name="phone" required placeholder="Отправьте нам свой телефон").main__input
+              button(type="submit").main__button Отправить
+        //- img.main__video(src="images/lemon-bg.png")
+        //- .main__bg-img
+
+      section(style="z-index:3").photo.place
+        .col-12.flex.photo__wrap
+
+
+          .photo__list.gallery(itemscope itemtype="http://schema.org/ImageGallery")
+
+
+              figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" style="animation-delay: 0")
+                a(href="https://pp.vk.me/c637431/v637431246/3665/MxMYl0NYwuc.jpg" itemprop="contentUrl" data-size="1280x853")
+                  img.m-img(src="https://pp.vk.me/c637431/v637431246/3665/MxMYl0NYwuc.jpg" itemprop="thumbnail" alt="Image description" )
+
+              figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" style="animation-delay: .1s")
+                a(href="https://pp.vk.me/c637431/v637431956/3ae9/MMnHJGpWfoA.jpg" itemprop="contentUrl" data-size="750x500")
+                  img.l-img(src="https://pp.vk.me/c637431/v637431956/3ae9/MMnHJGpWfoA.jpg" itemprop="thumbnail" alt="Image description" )
+
+              figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" style="animation-delay: .2s")
+                a(href="https://pp.vk.me/c637431/v637431725/3124/zYtnvVMiwos.jpg" itemprop="contentUrl" data-size="1280x853")
+                  img.m-img(src="https://pp.vk.me/c637431/v637431725/3124/zYtnvVMiwos.jpg" itemprop="thumbnail" alt="Image description" )
+
+              figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" style="animation-delay: .2s")
+                a(href="https://pp.vk.me/c637431/v637431863/3374/22xpX543MOs.jpg" itemprop="contentUrl" data-size="1280x853")
+                  img.l-img(src="https://pp.vk.me/c637431/v637431863/3374/22xpX543MOs.jpg" itemprop="thumbnail" alt="Image description" )
+
+              figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" style="animation-delay: .3s")
+                a(href="https://pp.vk.me/c637431/v637431110/2c6e/FYdqRNZyNzY.jpg" itemprop="contentUrl" data-size="682x1024")
+                  img.m-img(src="https://pp.vk.me/c637431/v637431110/2c6e/FYdqRNZyNzY.jpg" itemprop="thumbnail" alt="Image description" )
+
+              figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" style="animation-delay: .4s")
+                a(href="https://pp.vk.me/c637431/v637431149/2409/JZhfJKhF2wY.jpg" itemprop="contentUrl" data-size="750x500")
+                  img.m-img(src="https://pp.vk.me/c637431/v637431149/2409/JZhfJKhF2wY.jpg" itemprop="thumbnail" alt="Image description" )
+              figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" style="animation-delay: .3s")
+                a(href="https://pp.vk.me/c631920/v631920824/2136b/c6eBaqDRn7M.jpg" itemprop="contentUrl" data-size="1280x853")
+                  img.m-img(src="https://pp.vk.me/c631920/v631920824/2136b/c6eBaqDRn7M.jpg" itemprop="thumbnail" alt="Image description" )
+
+              figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" style="animation-delay: .4s")
+                a(href="https://pp.vk.me/c626119/v626119824/5458/QGNBUyKOyVE.jpg" itemprop="contentUrl" data-size="682x1024")
+                  img.l-img(src="https://pp.vk.me/c626119/v626119824/5458/QGNBUyKOyVE.jpg" itemprop="thumbnail" alt="Image description" )
+
+
+
+
+          .photo__content
+            h2.photo__title Наши фото
+            p.photo__desc Мы учувствуем в множестве разных мероприятий. От открытия ресторана или кафе до выступлений на свадьбах и корпоративах. Наши актеры умеют поднимать настроение публике, и имеют навык импровизации для удивления ваших гостей.
+
+
+            .photo__list-slide.gallery(itemscope itemtype="http://schema.org/ImageGallery")
+
+
+
+
+      section(style="z-index:2").advent.place
+        .col-12
+          .advent__content.flex
+              .advent__item(style="animation-delay: .1s")
+                .advent__icon.icon-hb
+                span Дни рождения
+              .advent__item(style="animation-delay: .2s")
+                .advent__icon.icon-an
+                span Анимация
+              .advent__item(style="animation-delay: .3s")
+                .advent__icon.icon-fg
+                span Постановочные бои
+              .advent__item(style="animation-delay: .4s")
+                .advent__icon.icon-pr
+                span Вечеринки
+              .advent__item(style="animation-delay: .5s")
+                .advent__icon.icon-ih
+                span Необычные поздравления
+              .advent__item(style="animation-delay: .6s")
+                .advent__icon.icon-hd
+                span Импровизация
+              .advent__item(style="animation-delay: .7s")
+                .advent__icon.icon-kd
+                span Праздники для детей
+
+          .advent__title Мы можем все это и даже больше
+
+      section(style="z-index:1").form.flex.place
+        h2.form__title Весь наш креатив к вашим услугам
+        form.main__form.flex(metod="POST")
+          input(type="phone" name="phone" required placeholder="Отправьте нам свой телефон").main__input
+          button(type="submit").main__button.main__button_b Отправить
+        .form__bg
+        .color-lemon
+        .projects Наши проекты: <a target='_blank' href='/dedmoroz/'>Дед Мороз в Кемерово</a>
+
+    .pagination
+      .pagination__dot.pagination__dot_active
+      - var n = 0
+      while n < 3
+        .pagination__dot
+        - n++
+    include photoswipe.html
+    script(src="common.js")

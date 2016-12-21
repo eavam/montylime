@@ -1,0 +1,45 @@
+{
+  "name": "lend_fullscreen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pugCompile": "pug -w src/index.pug -o dist -P",
+    "prod": "cross-env NODE_ENV=production webpack && pug src/index.pug -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egorAva/montylime.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/egorAva/montylime/issues"
+  },
+  "homepage": "https://github.com/egorAva/montylime#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "cssnano": "^3.7.6",
+    "eslint": "^3.7.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "jade": "^1.11.0",
+    "postcss": "^5.2.4",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-import": "^8.1.2",
+    "postcss-loader": "^0.13.0",
+    "postcss-svg": "^1.0.6",
+    "pug": "^2.0.0-beta6",
+    "style-loader": "^0.13.1",
+    "sugarss": "^0.1.6",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  }
+}
